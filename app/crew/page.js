@@ -16,9 +16,9 @@ export default function Crew(){
 
     return <section className="w-full h-full flex flex-col pb-0 text-white p-8 font-Barlow_Condensed
     sm:p-10 lg:max-w-[1410px] lg:mx-auto ">      
-    <Image fill src={crewMobil} alt="" sizes="(max-width: 640px) 100vw, 50vw" className="-z-10 sm:hidden"/>
-    <Image fill src={crewTablet} quality={90} alt="" sizes="(max-width: 640px) 100vw, 50vw" className="-z-10 lg:hidden"/>
-    <Image fill src={crewDesktop} quality={90} alt="" sizes="(max-width: 640px) 100vw, 50vw" className="-z-10 hidden lg:block"/>
+    <Image fill placeholder="blur" src={crewMobil} alt="" sizes="(max-width: 640px) 100vw, 50vw" className="-z-10 sm:hidden"/>
+    <Image fill placeholder="blur" src={crewTablet} quality={90} alt="" sizes="(max-width: 640px) 100vw, 50vw" className="-z-10 lg:hidden"/>
+    <Image fill placeholder="blur" src={crewDesktop} quality={90} alt="" sizes="(max-width: 640px) 100vw, 50vw" className="-z-10 hidden lg:block"/>
 
     <h2 className="text-center text-xl tracking-widest font-light mb-6 uppercase md:text-left lg:text-[28px]">
         <strong className="text-white/25 mr-6">02</strong>

@@ -24,9 +24,9 @@ export default function Home() {
  
     return <section className="w-full text-white p-8 font-Barlow_Condensed
             sm:p-12 lg:max-w-[1110px] lg:mx-auto ">      
-            <Image fill src={destinationMobile} alt="" sizes="(max-width: 640px) 100vw, 50vw" className="-z-10 sm:hidden"/>
-            <Image fill src={destinationTablet} alt="" sizes="(max-width: 640px) 100vw, 50vw" className="-z-10 lg:hidden"/>
-            <Image fill src={destinationDesktop} alt="" sizes="(max-width: 640px) 100vw, 50vw" className="-z-10 hidden lg:block"/>
+            <Image fill placeholder="blur" src={destinationMobile} alt="" sizes="(max-width: 640px) 100vw, 50vw" className="-z-10 sm:hidden"/>
+            <Image fill placeholder="blur" src={destinationTablet} alt="" sizes="(max-width: 640px) 100vw, 50vw" className="-z-10 lg:hidden"/>
+            <Image fill placeholder="blur" src={destinationDesktop} alt="" sizes="(max-width: 640px) 100vw, 50vw" className="-z-10 hidden lg:block"/>
 
         <h2 className="text-center text-xl tracking-widest font-light mb-6 uppercase md:text-left lg:text-[28px]">
             <strong className="text-white/25 mr-6">01</strong>

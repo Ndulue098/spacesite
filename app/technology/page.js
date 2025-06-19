@@ -18,9 +18,9 @@ export default function Tech() {
 
     return <section className="w-full text-white font-Barlow_Condensed
      lg:max-w-[1350px] lg:ml-auto flex flex-col h-full lg:p-12 lg:pr-0">      
-    <Image fill src={TechMobile}  alt=""  sizes="(max-width: 640px) 100vw, 50vw" className="-z-10 sm:hidden"/> 
-    <Image fill src={TechTablet}  alt=""  sizes="(max-width: 640px) 100vw, 50vw" className="-z-10 lg:hidden"/>
-    <Image fill src={TechDesktop}  alt="" sizes="(max-width: 640px) 100vw, 50vw" className="-z-10 hidden lg:block"/>
+    <Image fill placeholder="blur" src={TechMobile}  alt=""  sizes="(max-width: 640px) 100vw, 50vw" className="-z-10 sm:hidden"/> 
+    <Image fill placeholder="blur" src={TechTablet}  alt=""  sizes="(max-width: 640px) 100vw, 50vw" className="-z-10 lg:hidden"/>
+    <Image fill placeholder="blur" src={TechDesktop}  alt="" sizes="(max-width: 640px) 100vw, 50vw" className="-z-10 hidden lg:block"/>
 
 
     <h2 className="mt-8 text-center text-xl tracking-widest font-light mb-6 uppercase md:text-left md:px-12 lg:text-[28px] lg:mt-0 lg:px-0">

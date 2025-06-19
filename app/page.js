@@ -6,9 +6,9 @@ import backgroundhomedesktop from "@/public/home/background-home-desktop.jpg"
 export default function Home() {
   return <section className="flex p-8 w-full h-full font-Barlow_Condensed scroll-mb-5 text-white">    
    
-    <Image fill src={backgroundhomemobile} alt="" className="-z-10 sm:hidden" />   
-     <Image fill src={backgroundhometablet} alt="" className="-z-10 lg:hidden" />
-    <Image fill src={backgroundhomedesktop} alt="" className="-z-10 hidden lg:block "/> 
+    <Image fill placeholder="blur" src={backgroundhomemobile} alt="" className="-z-10 sm:hidden" />   
+    <Image fill placeholder="blur" src={backgroundhometablet} alt="" className="-z-10 lg:hidden" />
+    <Image fill placeholder="blur" src={backgroundhomedesktop} alt="" className="-z-10 hidden lg:block "/> 
     
     <div className="lg:mb-[128px] grid grid-cols-1 p-8 text-white grid-rows-[40fr_60fr]
      sm:px-12 mx-auto  
