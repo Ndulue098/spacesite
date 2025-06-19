@@ -11,7 +11,13 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      height:{screen:"100dvh"},
+      // height:{screen:"100dvh"},  
+      fontFamily:{
+        bellefair:["bellefair","sans-serif"],
+        Barlow_Condensed:["Barlow Condensed","sans-serif"],
+      },
     },
   },
-  plugins: [],
+  plugins: [], 
 };
