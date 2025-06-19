@@ -46,7 +46,7 @@ export default function Crew(){
 
         <div className="lg:justify-self-center  mx-auto w-full h-full relative">
             {/* <img src={`crewMan} alt="" className=" inline-block m-6  mx-auto w-[200px] aspect-square sm:w-[250px] md:w-[300px] lg:w-[480px]"/> */}
-            <Image quality={100} fill src={png} alt="mars" className=" absolute w-[310px] opacity-100 block h-auto lg:object-contain object-contain mx-auto aspect-square sm:w-[310px] md:h-full lg:w-[480px]"/>
+            <Image placeholder="blur" quality={100} fill src={png} alt="mars" className=" absolute w-[310px] opacity-100 block h-auto lg:object-contain object-contain mx-auto aspect-square sm:w-[310px] md:h-full lg:w-[480px]"/>
             {/* <Image quality={100} src={crewMan} alt="mars" className="w-[310px] opacity-100 block h-auto object-contain mx-auto aspect-square sm:w-[310px] md:h-full lg:w-[480px]"/> */}
              
         </div>    
