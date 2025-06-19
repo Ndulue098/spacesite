@@ -2,11 +2,14 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useRef, useState } from "react";
+import { usePathname } from "next/navigation";
+
 // import a href="" from "next/link";
 
 export default function Navigation() {
     const [isOpen,setIsOpen]=useState(false)
     const ref=useRef()
+    const pathname = usePathname();
 
     function handleOpen(){
         ref.current.style.transform="translateX(-16rem)"
@@ -17,6 +20,10 @@ export default function Navigation() {
         setIsOpen(false)
     } 
 
+     const getLinkClasses = (path) =>
+        `group relative tracking-widest font-light my-auto flex justify-center h-full items-center text-base uppercase ${
+            pathname === path ? "border-b-2 border-white" : ""
+        }`;
 
     return <nav className="text-white h-[88px] flex items-center justify-between w-full 
         sm:p-12 p-8 md:px-0 md:py-0  lg:mt-8 font-Barlow_Condensed"> 
@@ -27,21 +34,32 @@ export default function Navigation() {
 
             <ul className=" backdrop-contrast-50   hidden md:flex items-center justify-evenly gap-6 h-full
             md:pl-10 w-full lg:px-16 lg:gap-12 lg:justify-end lg:w-[50%]"> 
-                <Link href="/" className="group relative tracking-widest font-light my-auto flex justify-center h-full items-center  text-base uppercase border-white border-b-0"> 
-                    <li><strong className="hidden md:inline-block mr-2 font-bold my-auto">00</strong> Home</li>
-                    <span class="absolute left-0 bottom-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
+                <Link href="/" className={getLinkClasses("/")}>
+                    <li>
+                        <strong className="hidden md:inline-block mr-2 font-bold">00</strong> Home
+                    </li>
+                    <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
                 </Link>
-                <Link href="/destination" className="group relative tracking-widest font-light my-auto flex justify-center h-full items-center  text-base uppercase "> 
-                    <li> <strong className="hidden md:inline-block mr-2 font-bold">01</strong> Destination</li>
-                    <span class="absolute left-0 bottom-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
-                </Link> 
-                <Link href="/crew" className="group relative tracking-widest font-light my-auto flex justify-center h-full items-center  text-base uppercase  ">
-                    <li><strong className="hidden md:inline-block mr-2 font-bold">02</strong> Crew</li> 
-                    <span class="absolute left-0 bottom-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
-                </Link >
-                <Link href="/technology" className="group relative tracking-widest font-light my-auto flex justify-center h-full items-center  text-base uppercase  ">
-                    <li><strong className="hidden md:inline-block mr-2 font-bold">03</strong> Technology</li>
-                    <span class="absolute left-0 bottom-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
+
+                <Link href="/destination" className={getLinkClasses("/destination")}>
+                    <li>
+                        <strong className="hidden md:inline-block mr-2 font-bold">01</strong> Destination
+                    </li>
+                    <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
+                </Link>
+
+                <Link href="/crew" className={getLinkClasses("/crew")}>
+                    <li>
+                        <strong className="hidden md:inline-block mr-2 font-bold">02</strong> Crew
+                    </li>
+                    <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
+                </Link>
+
+                <Link href="/technology" className={getLinkClasses("/technology")}>
+                    <li>
+                        <strong className="hidden md:inline-block mr-2 font-bold">03</strong> Technology
+                    </li>
+                    <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
                 </Link>
             </ul> 
 

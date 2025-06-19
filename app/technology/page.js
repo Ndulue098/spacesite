@@ -30,7 +30,7 @@ export default function Tech() {
 
     <div className="pt-16 lg:grid lg:gap-x-8 lg:items-center lg:justify-center lg:grid-cols-2 lg:text-left lg:flex-1 lg:pt-0"> 
         <div className=" mb-8 h-[330px] md:[375px] pt-16 relative lg:col-start-2 lg:h-full lg:mb-0   overflow-hidden">  
-            <Image fill placeholder="blur" src={`/${portrait}`} alt="" className="hover:scale-125 transition-all duration-500 ease-in-out absolute inline-block object-bottom object-cover  md:w-[300px] "/>
+            <Image fill src={`/${portrait}`} alt="" className="hover:scale-125 transition-all duration-500 ease-in-out absolute inline-block object-bottom object-cover  md:w-[300px] "/>
         </div>   
   
         <div className="text-center sm:px-12 lg:px-0 px-8 lg:col-start-1 lg:col-end-2 lg:row-start-1 lg:flex lg:items-center lg:justify-center lg:gap-8">
